@@ -2,10 +2,10 @@ import * as dotenv from 'dotenv';
 
 dotenv.config()
 
-import {Client, GatewayIntentBits} from 'discord.js';
+import {Client, IntentsBitField} from 'discord.js';
 
 (async () => {
-	const client = new Client({intents: [GatewayIntentBits.GuildScheduledEvents]});
+	const client = new Client({intents: [IntentsBitField.Flags.GuildScheduledEvents]});
 
 	await client.login(process.env.DISCORD_TOKEN);
 
